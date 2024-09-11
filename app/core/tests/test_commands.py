@@ -47,7 +47,7 @@ class CommandTests(SimpleTestCase):
         + Also check that the commands is set up correctly and can be called inside our Django project
         """
 
-        patched_check.assert_called_once_with(database=['default']) # ensures that the "mock value, the mocked object, the check method" inside our command is called with these parameters. 
+        patched_check.assert_called_once_with(databases=['default']) # ensures that the "mock value, the mocked object, the check method" inside our command is called with these parameters. 
         # call once time
 
     # Test Case 2 -> Testing what happens or what should happen if the database isn't ready.
