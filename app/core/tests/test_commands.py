@@ -63,5 +63,5 @@ class CommandTests(SimpleTestCase):
         call_command('wait_for_db')
 
         self.assertEqual(patched_check.call_count, 6)
-        patched_check.assert_called_with(database=['default']) # assert_called_with -> call more than once time
+        patched_check.assert_called_with(databases=['default']) # assert_called_with -> call more than once time
     # Write this tests because we want CHECK THE DATABASE -> WAIT A FEW SECOND -> CHECK AGAIN IF NOT READY
